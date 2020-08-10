@@ -1,0 +1,347 @@
+:root {
+  --theme-text-color       : #444444;
+  --theme-background-color : #fefefe;
+  --theme-highlight-color  : #ffa200;
+}
+
+html,
+body {
+  margin                   : 0;
+  padding                  : 0;
+  width                    : 100%;
+  height                   : 100%;
+  font-size                : 100%;
+  -webkit-text-size-adjust : 100%;
+  -moz-text-size-adjust    : 100%;
+  -ms-text-size-adjust     : 100%;
+  font-family              : Avenir Next, Helvetica Nue, sans-serif;
+}
+
+body {
+  display          : flex;
+  flex-direction   : column;
+  background-color : var(--theme-background-color);
+}
+
+body * {
+  outline : none;
+}
+
+.content-row {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : space-between;
+  align-items     : center;
+}
+
+.text-theme {
+  color : var(--theme-highlight-color)
+}
+
+.label-theme {
+  color            : var(--theme-background-color);
+  background-color : var(--theme-highlight-color);
+}
+
+#header-panel {
+  flex-shrink      : 0;
+  flex-grow        : 0;
+  min-width        : 0;
+  min-height       : 0;
+  z-index          : 99;
+  background-color : var(--theme-background-color);
+  box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-text {
+  color : var(--theme-highlight-color);
+}
+
+.top-nav-link:hover,
+.top-nav-link:focus {
+  color               : var(--theme-text-color);
+  border-bottom-color : var(--theme-text-color);
+}
+
+#main-container {
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : row;
+}
+
+#side-container {
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : row;
+}
+
+#photo-features-container {
+  flex-basis     : 0;
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : column;
+}
+
+#photo-features-list {
+  flex-shrink : 1;
+  flex-grow   : 1;
+  min-width   : 0;
+  min-height  : 0;
+  overflow    : auto;
+}
+
+#photo-container {
+  flex-basis     : 0;
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : column;
+  transition     : width 1s linear, opacity 0.5s linear 0.5s;
+}
+
+#photo-container.collapsed {
+  flex-grow  : 0;
+  width      : 0;
+  transition : width 1s linear 0.5s, opacity 0.5s linear;
+}
+
+#photo-list {
+  flex-shrink : 1;
+  flex-grow   : 1;
+  min-width   : 0;
+  min-height  : 0;
+  overflow    : auto;
+}
+
+#photo-list:empty,
+#photo-features-list:empty {
+  text-align  : center;
+  padding-top : 4em;
+  font-size   : 1.5em;
+  font-style  : italic;
+  color       : silver;
+}
+
+#photo-list:empty:after {
+  content : "no photos"
+}
+
+#photo-features-list:empty:after {
+  content : "no features";
+}
+
+.photo-preview-name {
+  padding : 2px 0 2px 0;
+}
+
+.photo-preview {
+  cursor     : pointer;
+  box-shadow : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-feature-node {
+  border-left : solid 4px transparent;
+}
+
+.photo-feature-node.selected {
+  border-left-color : var(--theme-highlight-color);
+}
+
+#center-container {
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : column;
+}
+
+#center-panel {
+  order       : 1;
+  flex-shrink : 1;
+  flex-grow   : 1;
+}
+
+.view-node {
+  width  : 100%;
+  height : 100%;
+}
+
+.view-node.loading {
+  cursor : wait;
+}
+
+.slider-table td {
+  padding : 0;
+  /*border  : solid 1px red;*/
+}
+
+.directions-node {
+  margin : 0 5px 0 5px;
+}
+
+.direction-node {
+  width          : 20px;
+  vertical-align : middle;
+}
+
+.direction-node:hover {
+  color : var(--theme-highlight-color);
+}
+
+.direction-node:active {
+  color : #d2e9f9;
+}
+
+.direction-label {
+  color : var(--theme-highlight-color);
+}
+
+/*
+
+#view-container {
+  flex-shrink : 1;
+  flex-grow   : 1;
+  min-width   : 0;
+  min-height  : 0;
+}
+
+#view-container.loading {
+  cursor : wait;
+}
+
+#sphere-container{
+  
+}
+
+*/
+
+#user-thumb-node {
+  height         : 36px;
+  border-radius  : 18px;
+  vertical-align : middle;
+}
+
+.esri-widget--button {
+  color            : var(--theme-text-color) !important;
+  background-color : var(--theme-background-color) !important;
+}
+
+.esri-attribution {
+  color            : var(--theme-text-color) !important;
+  background-color : var(--theme-background-color) !important;
+}
+
+.view-loading-node {
+  box-shadow : none !important;
+}
+
+.view-loading-node .loader-text {
+  color       : var(--theme-background-color) !important;
+  padding-top : 3em !important;
+}
+
+@keyframes load {
+  0%, 80%, 100% {
+    opacity    : .75;
+    box-shadow : 0 0 var(--theme-highlight-color);
+    height     : 2rem
+  }
+
+  40% {
+    opacity    : 1;
+    box-shadow : 0 -0.5rem var(--theme-highlight-color);
+    height     : 2.5rem
+  }
+}
+
+.loader-bars:before,
+.loader-bars:after,
+.loader-bars {
+  background : var(--theme-highlight-color);
+}
+
+.overview-container {
+  pointer-events : none;
+  width          : 250px;
+  height         : 200px;
+}
+
+.slides-container {
+  position         : absolute;
+  bottom           : 0;
+  left             : 0;
+  right            : 0;
+  height           : 80px;
+  padding          : 10px 0 20px 0;
+  background-color : rgba(66, 66, 66, 0.2);
+  box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.3);
+  display          : flex;
+  flex-direction   : row;
+  justify-content  : center;
+  align-items      : center;
+  transition       : background-color 0.5s linear;
+  /*border           : solid 1px red;*/
+}
+
+.slides-container:hover,
+.slides-container:hover .slide-label {
+  background-color : rgba(66, 66, 66, 0.5);
+  transition       : background-color 0.5s linear;
+}
+
+.slide-label {
+  cursor           : pointer;
+  position         : absolute;
+  top              : -29px;
+  min-width        : 44px;
+  color            : #dedede;
+  text-shadow      : 0 1px 2px rgba(0, 0, 0, 0.3);
+  background-color : rgba(66, 66, 66, 0.2);
+  border-radius    : 10px 10px 0 0;
+  transition       : background-color, top 0.5s linear;
+  /*border           : solid 1px red;*/
+}
+
+.slide-label:hover {
+  color : #ffffff;
+}
+
+.slides-container.animate-out-up .slide-label {
+  top        : -45px;
+  transition : top 0.5s linear;
+}
+
+.slide-btn {
+  cursor           : pointer;
+  position         : relative;
+  background-color : transparent;
+  border           : solid 1px transparent;
+  height           : 64px;
+  padding          : 0;
+  margin-right     : 10px;
+  box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slide-btn:last-of-type {
+  margin-right : 0;
+}
+
+.slide-btn:hover {
+  border-color : #dddddd;
+}
+
+.slide-btn-thumb {
+  width : auto;
+}

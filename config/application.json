@@ -1,0 +1,31 @@
+{
+  "title": "",
+  "appid": "",
+  "group": "",
+  "webmap": "",
+  "webscene": "5d91378bc22a42bd80851475f737e9ab",
+  "portalUrl": "https://www.arcgis.com",
+  "oauthappid": "hrFP8yDGOiGFx4ub",
+  "proxyUrl": "",
+  "proxyUrl_APL": "https://apl.esri.com/proxy/DotNet/proxy.ashx",
+  "units": "dual",
+  "helperServices": {
+    "geometry": {
+      "url": null
+    },
+    "printTask": {
+      "url": null
+    },
+    "elevationSync": {
+      "url": null
+    },
+    "geocode": [
+      {
+        "url": null
+      }
+    ]
+  },
+  "ThemeTextColor": "",
+  "ThemeBackgroundColor": "",
+  "ThemeHighlightColor": ""
+}
